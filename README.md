@@ -14,8 +14,11 @@
 
 - Bash-style meta delete character
 
+- pyenv setup
+
 Usage:
 
 ```shell
-zmodule plamendelchev/zim-goodies --source oh-my-posh.zsh --source history.zsh --source aliases.zsh --source editor.zsh --source misc.zsh
+zmodule plamendelchev/zim-goodies --source oh-my-posh.zsh --source history.zsh --source aliases.zsh --source editor.zsh
+--source misc.zsh --source pyenv.zsh
 ```
