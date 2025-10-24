@@ -5,8 +5,13 @@ bindkey -e
 export TIMEFMT=$'real\t%E\nuser\t%U\nsys\t%S'
 
 # bash-style meta-delete
-autoload -U select-word-style
-select-word-style shell
+function backward-kill-word-bash {
+  local WORDCHARS=${WORDCHARS/\/}
+  zle backward-kill-word
+  zle -f kill
+}
+zle -N backward-kill-word-bash
+bindkey '^[^?' backward-kill-word-bash  # Meta-Backspace (Option-Delete)
 
 # Enable comments in interactive mode
 setopt interactive_comments
