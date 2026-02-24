@@ -7,7 +7,7 @@ export TIMEFMT=$'real\t%E\nuser\t%U\nsys\t%S'
 # bash-style meta-delete
 function backward-kill-word-bash {
   # Remove "- _ . /" characters
-  local WORDCHARS=${WORDCHARS//[-_.\/]/}
+  local WORDCHARS=${WORDCHARS//[=-_.\/]/}
   zle backward-kill-word
   zle -f kill
 }
